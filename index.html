@@ -21,7 +21,7 @@
             <div class="image-box d-flex justify-content-center align-items-center position-relative mx-5">
                 <img :src="src[counter]" :alt="alt[counter]">
                 <nav class="d-flex justify-content-center align-items-center position-absolute rounded-pill p-3">
-                    <i v-for="circle in src" class="fas fa-circle mx-4"></i>
+                    <i v-for="(circle,index) in src" class="fas fa-circle mx-4" @click="counter=index"></i>
                 </nav>
             </div>
             <i class="fas fa-chevron-right" @click="(counter < src.length-1) ? counter += 1 : counter = 0"></i>
