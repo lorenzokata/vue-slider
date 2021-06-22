@@ -17,17 +17,14 @@
         <h1>Buen Camino, Peregrino!</h1>
 
         <div class="wrapper d-flex justify-content-center align-items-center">
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-left" @click="(counter > 0) ? counter -= 1 : counter = src.length-1"></i>
             <div class="image-box d-flex justify-content-center align-items-center position-relative mx-5">
-                <img src="img/image1.jpg" alt="">
+                <img :src="src[counter]" :alt="alt[counter]">
                 <nav class="d-flex justify-content-center align-items-center position-absolute rounded-pill p-3">
-                    <i class="fas fa-circle mx-4"></i>
-                    <i class="fas fa-circle mx-4"></i>
-                    <i class="fas fa-circle mx-4"></i>
-                    <i class="fas fa-circle mx-4"></i>
+                    <i v-for="circle in src" class="fas fa-circle mx-4"></i>
                 </nav>
             </div>
-            <i class="fas fa-chevron-right"></i>
+            <i class="fas fa-chevron-right" @click="(counter < src.length-1) ? counter += 1 : counter = 0"></i>
         </div>
 
     </div>

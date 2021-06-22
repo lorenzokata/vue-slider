@@ -4,8 +4,8 @@ const app = new Vue(
       
       data:{
         counter : 0,
-        src : [''],
-
+        src : ['img/image1.jpg','img/image2.jpg','img/image3.jpg','img/image4.jpg',],
+        alt : ['panorama','monumento al pellegrino','pamplona','cattedrale di burgos']
       },
   
       methods:{
