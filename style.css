@@ -1,0 +1,34 @@
+.container{
+    height: 100vh;
+}
+
+h1{
+    font-size: 60px;
+}
+
+.wrapper{
+    height: 80%;
+    width: 100%;
+}
+
+.image-box{
+    height: 100%;
+    width: 100%;
+}
+
+.image-box img{
+    width: 100%;
+}
+
+.wrapper > i{
+    font-size: 80px;
+}
+
+nav{
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+nav i{
+    filter: invert(1);
+}
