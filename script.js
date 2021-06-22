@@ -8,25 +8,20 @@ const app = new Vue(
         alt : ['panorama','monumento al pellegrino','pamplona','cattedrale di burgos']
       },
   
+      mounted(){
+        this.autoPlay()
+      },
+
       methods:{
 
-        autoPlay : function(){
+        autoPlay: function(){ setInterval(() => {this.next()},3000)},
 
-            setInterval(function(){
-                // (this.counter < (this.src.length - 1)) ? this.counter++ : this.counter = 0;
-                if (this.counter < this.src.length - 1){
-                    this.counter++;
-                } else{
-                    this.counter = 0
-                }
-                console.log(this.counter);
-            }, 1000);
+        next(){
 
+            this.counter = (this.counter < this.src.length-1) ? ++this.counter : 0;
         }
 
       }
     }
   );
   
-
-  app.autoPlay();
