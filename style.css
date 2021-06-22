@@ -31,4 +31,5 @@ nav{
 
 nav i{
     filter: invert(1);
+    font-size: 50px;
 }
