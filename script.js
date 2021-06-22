@@ -9,12 +9,24 @@ const app = new Vue(
       },
   
       methods:{
-        nomeFunzione(){
-          this.variabile;
-        },
-        nomeFunzione2(){
-          this.variabile;
+
+        autoPlay : function(){
+
+            setInterval(function(){
+                // (this.counter < (this.src.length - 1)) ? this.counter++ : this.counter = 0;
+                if (this.counter < this.src.length - 1){
+                    this.counter++;
+                } else{
+                    this.counter = 0
+                }
+                console.log(this.counter);
+            }, 1000);
+
         }
+
       }
     }
   );
+  
+
+  app.autoPlay();
